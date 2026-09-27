@@ -12,7 +12,7 @@ The canonical issue tracker is the public GitHub repository [BillBalint-SM/proje
 4. Use question, bug, enhancement, documentation or help wanted when the issue needs a different triage signal.
 5. Link the issue from the relevant ADR or README when it establishes a durable project decision.
 
-The first synthesized foundation specification is [Issue #1](https://github.com/BillBalint-SM/project-O.D.A.F./issues/1), labeled ready-for-agent.
+The foundation [Issue #1](https://github.com/BillBalint-SM/project-O.D.A.F./issues/1) and expanded [Issue #2](https://github.com/BillBalint-SM/project-O.D.A.F./issues/2) are source specifications. Derive implementation tickets from the single [unified implementation plan](../implementation-plan.md), whose work-package IDs and blocking edges are the delivery map. Keep links back to the source issues without copying their entire bodies into each ticket.
 
 ## Safety
 

@@ -4,9 +4,9 @@ ODAF is a local, reproducible fleet for five specialized AI-development agents r
 
 ## Status
 
-This repository contains an accepted design for the Windows control plane, common-image fleet, agent identities, runtime authority and v1 work policy. The executable control plane, dashboard, router, queue and guest supervisor have not been implemented. The [decision status index](docs/decision-status.md) separates accepted decisions from open ones; [ADR 0007](docs/adr/0007-work-routing-and-evidence.md) defines the accepted work policy and [agent domain context](docs/agents/domain.md) names the five specialist roles.
+This repository contains an accepted design for the Windows control plane, common-image fleet, agent identities, runtime authority and v1 work policy. The executable control plane, dashboard, router, queue and guest supervisor have not been implemented. The [unified implementation plan](docs/implementation-plan.md) is the single delivery roadmap; the [decision status index](docs/decision-status.md) separates accepted decisions from open ones. [ADR 0007](docs/adr/0007-work-routing-and-evidence.md) defines the accepted work policy and [agent domain context](docs/agents/domain.md) names the five specialist roles.
 
-The original foundation specification is published as [GitHub Issue #1](https://github.com/BillBalint-SM/project-O.D.A.F./issues/1). Later accepted ADRs in this repository take precedence where that issue's early implementation suggestions differ.
+[GitHub Issue #1](https://github.com/BillBalint-SM/project-O.D.A.F./issues/1) and [Issue #2](https://github.com/BillBalint-SM/project-O.D.A.F./issues/2) remain source specifications. The unified plan reconciles both; later accepted ADRs take precedence where their early suggestions differ.
 
 ## Goal
 
@@ -89,6 +89,7 @@ The four-GiB baseline is for one lightweight agent workload. Heavy browser use, 
 │   │   └── issue-tracker.md
 │   ├── agent-stack-and-authority.md
 │   ├── decision-status.md
+│   ├── implementation-plan.md
 │   ├── q8-routing-and-parallelism-spec.md
 │   ├── research-q8-dashboard-routing-accountability.md
 │   ├── task-flow.md
@@ -153,11 +154,6 @@ Local validation is the default. The future validation command should run PowerS
 
 GitHub Actions may be added later for manual validation, release artifacts or a trusted self-hosted Windows integration runner. Hosted GitHub runners are not assumed to provide Hyper-V integration.
 
-## Next implementation order
+## Implementation roadmap
 
-1. Implement configuration loading, validation and dry-run planning.
-2. Implement idempotent clone/reconcile and guest personalization.
-3. Implement selected start/stop/status operations.
-4. Implement the guest supervisor and health contract.
-5. Implement the host-local dashboard against those operations and the work-assignment contract; verify arbitrary subset control, state reconciliation and operator review.
-6. Add profile-specific capabilities and optional CI.
+Use the [unified implementation plan](docs/implementation-plan.md) for delivery order, work-package dependencies, release gates and ticket derivation. The summaries above are architecture context, not a separate implementation sequence.

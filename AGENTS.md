@@ -6,10 +6,11 @@ Read these documents before changing the project:
 
 1. [CONTEXT.md](CONTEXT.md) for project vocabulary.
 2. [docs/decision-status.md](docs/decision-status.md) to distinguish accepted design from open choices and unimplemented work.
-3. [docs/agents/domain.md](docs/agents/domain.md) for the project-specific agent context.
-4. The relevant decision record in [docs/adr](docs/adr).
-5. [docs/agents/issue-tracker.md](docs/agents/issue-tracker.md) before creating or updating a GitHub issue.
-6. [docs/agent-stack-and-authority.md](docs/agent-stack-and-authority.md) when changing tool placement or lifecycle authority.
+3. [docs/implementation-plan.md](docs/implementation-plan.md) for the single delivery roadmap and work-package dependencies.
+4. [docs/agents/domain.md](docs/agents/domain.md) for the project-specific agent context.
+5. The relevant decision record in [docs/adr](docs/adr).
+6. [docs/agents/issue-tracker.md](docs/agents/issue-tracker.md) before creating or updating a GitHub issue.
+7. [docs/agent-stack-and-authority.md](docs/agent-stack-and-authority.md) when changing tool placement or lifecycle authority.
 
 The project is currently a documentation-and-contract foundation. Do not claim that the fleet controller, guest supervisor or image builder exists until executable tests prove it.
 
