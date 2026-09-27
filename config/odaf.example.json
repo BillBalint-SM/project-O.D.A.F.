@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "name": "odaf",
+    "environment": "lab"
+  },
+  "host": {
+    "platform": "windows",
+    "orchestrator": "powershell-5.1",
+    "hypervisor": "hyper-v",
+    "switchName": "CHANGE_ME"
+  },
+  "image": {
+    "name": "ubuntu-server-ai-development",
+    "version": "CHANGE_ME"
+  },
+  "network": {
+    "cidr": "CHANGE_ME",
+    "gateway": "CHANGE_ME",
+    "dns": [
+      "CHANGE_ME"
+    ]
+  },
+  "fleet": {
+    "defaultStartSet": "all",
+    "agents": [
+      {
+        "id": "agent-01",
+        "vmName": "odaf-agent-01",
+        "profile": "profile-01",
+        "ipv4": "CHANGE_ME"
+      },
+      {
+        "id": "agent-02",
+        "vmName": "odaf-agent-02",
+        "profile": "profile-02",
+        "ipv4": "CHANGE_ME"
+      },
+      {
+        "id": "agent-03",
+        "vmName": "odaf-agent-03",
+        "profile": "profile-03",
+        "ipv4": "CHANGE_ME"
+      },
+      {
+        "id": "agent-04",
+        "vmName": "odaf-agent-04",
+        "profile": "profile-04",
+        "ipv4": "CHANGE_ME"
+      },
+      {
+        "id": "agent-05",
+        "vmName": "odaf-agent-05",
+        "profile": "profile-05",
+        "ipv4": "CHANGE_ME"
+      }
+    ]
+  },
+  "guest": {
+    "linuxUser": "agent",
+    "supervisor": "odaf-agent-runner",
+    "sshPort": 22
+  },
+  "resources": {
+    "vcpus": 2,
+    "memoryGiB": 4,
+    "diskGiB": 70
+  },
+  "capabilities": {
+    "browser": "profile",
+    "dockerEngine": "profile",
+    "kubernetesCluster": "profile",
+    "localModels": "profile"
+  }
+}

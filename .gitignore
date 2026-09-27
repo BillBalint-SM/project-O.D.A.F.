@@ -1,0 +1,40 @@
+# Operator-local configuration and generated state
+config/*local*.json
+config/*.secret.*
+.scratch/
+runtime/
+state/
+logs/
+artifacts/
+
+# VM and image artifacts
+*.vhd
+*.vhdx
+*.avhd
+*.avhdx
+*.iso
+
+# Secrets and private identity material
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+**/authorized_keys
+**/known_hosts
+.env
+.env.*
+!.env.example
+
+# Tool and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+coverage/
+dist/
+build/
