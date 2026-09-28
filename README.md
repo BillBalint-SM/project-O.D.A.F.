@@ -4,7 +4,7 @@ ODAF is a local, reproducible fleet for five specialized AI-development agents r
 
 ## Status
 
-This repository contains an accepted design for the Windows control plane, common-image fleet, agent identities, runtime authority and v1 work policy. The executable control plane, dashboard, router, queue and guest supervisor have not been implemented. The [unified implementation plan](docs/implementation-plan.md) is the single delivery roadmap; the [decision status index](docs/decision-status.md) separates accepted decisions from open ones. [ADR 0007](docs/adr/0007-work-routing-and-evidence.md) defines the accepted work policy and [agent domain context](docs/agents/domain.md) names the five specialist roles.
+This repository contains an accepted design for the Windows control plane, common-image fleet, agent identities, runtime authority and v1 work policy. The executable control plane, dashboard, router, queue and guest supervisor have not been implemented. [ADR 0008](docs/adr/0008-paperclip-first-operator-plane.md) records a Paperclip-first evaluation for the local web work/agent surface; integration and final adoption are not yet verified. ODAF retains the Hyper-V fleet and guest-identity responsibilities. The [unified implementation plan](docs/implementation-plan.md) is the single delivery roadmap, subject to that pilot gate; the [decision status index](docs/decision-status.md) separates accepted decisions from open ones. [ADR 0007](docs/adr/0007-work-routing-and-evidence.md) defines the accepted work policy and [agent domain context](docs/agents/domain.md) names the five specialist roles.
 
 [GitHub Issue #1](https://github.com/BillBalint-SM/project-O.D.A.F./issues/1) and [Issue #2](https://github.com/BillBalint-SM/project-O.D.A.F./issues/2) remain source specifications. The unified plan reconciles both; later accepted ADRs take precedence where their early suggestions differ.
 
@@ -38,14 +38,14 @@ Windows host
         └── Ubuntu VM: agent-05 ── guest supervisor ── profile-05
 ~~~
 
-The host manages VMs and presents the unified operator view. The guest supplies the environment. A profile describes agent specialization. The image provides common capabilities. Herdr and optional Orca add specialized terminal/worktree views without becoming the fleet dashboard. See the [agent stack and authority matrix](docs/agent-stack-and-authority.md).
+The diagram shows the original target, not an implemented system. [Paperclip](https://github.com/paperclipai/paperclip) is now the first candidate for its web work/agent surface; a one-VM pilot must decide whether it replaces that part of the ODAF control plane. The host still manages Hyper-V VMs, the guest supplies the environment, and a profile describes agent specialization. Herdr and optional Orca remain separate terminal/worktree candidates. See the [agent stack and authority matrix](docs/agent-stack-and-authority.md) and [ADR 0008](docs/adr/0008-paperclip-first-operator-plane.md).
 
 ## Working technical baseline
 
 | Area | Decision |
 |---|---|
 | Host control plane | Windows PowerShell 5.1 plus native Hyper-V cmdlets |
-| Operator dashboard | Required host-local interface backed by the ODAF control/status contract; UI technology not yet selected |
+| Operator dashboard | Required host-local web interface; Paperclip-first one-VM pilot before final selection or custom implementation |
 | Guest OS | Ubuntu Server LTS |
 | VM baseline | Generation 2, two vCPUs, four GiB fixed RAM, 70 GiB disk |
 | Guest supervisor | Small Python service managed by systemd |

@@ -20,12 +20,13 @@ This is an index. The linked ADR or domain document is authoritative for the rul
 | Collaboration | V1 supports solo, sequential and parallel read-only research/review. A lead may delegate logged, bounded, non-writing investigation inside the approved scope and budget. Parallel code writing is not a default mode. | [ADR 0007](adr/0007-work-routing-and-evidence.md) |
 | Evidence and authority | Work states acceptance criteria and per-item resource limits. Pre-dispatch eligibility and action authorization precede work. Local scoped edits, tests and commits may proceed; push, PR, merge, deploy and destructive actions need separate approval. An independent test/review agent checks maker evidence before the operator accepts, redirects or blocks. | [ADR 0007](adr/0007-work-routing-and-evidence.md), [task flow](task-flow.md) |
 | Evaluation | Automatic routing remains shadow-mode research until observed outcomes justify a separate explicit promotion decision. No numerical promotion thresholds are accepted. | [ADR 0007](adr/0007-work-routing-and-evidence.md) |
+| Operator-plane direction | Evaluate Paperclip first for the Windows-local web work/agent surface. Pause overlapping custom dashboard and work-control implementation until a one-VM fit/gap pilot establishes the authority boundary. This is not a claim of successful integration or final platform adoption. | [ADR 0008](adr/0008-paperclip-first-operator-plane.md) |
 
 ## Open or deferred
 
 | Area | Decision still needed / trigger |
 |---|---|
-| Dashboard delivery | Choose its host-local UI framework, packaging and concrete screens when implementing the first usable release. The dashboard requirement itself is fixed. |
+| Dashboard delivery | Test Paperclip's Windows-local installation and one-VM operator flow before selecting a final UI, packaging and integration route. The local dashboard requirement itself is fixed. |
 | Three non-implementation agents | Select their primary harnesses after the first pilot; define actual versioned skill/tool/permission profiles and final agent-to-VM mappings. Their five role names alone are not runnable configurations. |
 | Pi/Herdr pilot | Verify restart, reconnection, stop, timeout and uncertain-dispatch behavior on a guest before relying on interactive Pi runs. Define any distinct headless mode only if the pilot needs one. |
 | Budgets and routing promotion | Derive numerical agent/time/cost defaults, eligible auto-routing classes and promotion criteria from measured local work. Until then the operator supplies per-work-item limits and approves assignments. |
